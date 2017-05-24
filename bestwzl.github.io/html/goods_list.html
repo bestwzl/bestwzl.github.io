@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../scss/goods_list.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/pagination.css">
+	</head>
+	<body>
+	
+
+	<!-- 公共的头部分 -->
+		<div class="main_wrap">
+		    <div class="mianbaoxie">
+		      
+		    	<a href="../index.html"> <<返回首页</a>
+		    </div>	
+	        <div class="main_con">
+
+	           <div class="main_left">
+	           	    <p class="left_top1">
+	           	        <span class="this_bt">商品分类</span>
+	           	    	<a href="javascripe:;">更多>></a>
+	           	    </p>
+<!--  这里是json获取的二级菜单 -->
+	           	      <ul class="main_left_ul">
+	           	    	 
+	           	     </ul>
+
+	           </div>
+
+
+	            <div class="main_right">
+		            	<div class="c_name">
+		            		<p>单反相机</p>
+		            	</div>
+		            	<div class="goods_bq">
+		            		<p>商品标签:</p>
+		            	</div>
+		            	<!-- 商品选项 -->
+		            	<div class="goods_xuanxiang">
+		            		
+		            		<div class="goods_pinpai">
+		            			<a href="javascript:;">品牌:</a>
+			            		<ul class="pp_list">
+			            			<li><a href="javascript:;">全部</a></li>
+			            			<li><a href="javascript:;">佳能</a></li>
+			            			<li><a href="javascript:;">尼康</a></li>
+			            			<li><a href="javascript:;">宾得</a></li>
+			            			<li><a href="javascript:;">富士</a></li>
+			            			<li><a href="javascript:;">哈苏</a></li>
+			            			<li><a href="javascript:;">徕卡</a></li>
+			            		</ul>
+		            		</div>
+		            		
+		            		<div class="goods_jiage">
+		            			<a href="javascript:;">价格:</a>
+			            		<ul class="pp_list">
+			            			<li><a href="javascript:;">全部</a></li>
+			            			<li><a href="javascript:;">0-5000</a></li>
+			            			<li><a href="javascript:;">5000-8000</a></li>
+			            			<li><a href="javascript:;">8000-12000</a></li>
+			            			<li><a href="javascript:;">12000-15000</a></li>
+			            			<li><a href="javascript:;">15000-25000</a></li>
+			            			<li><a href="javascript:;">25000+</a></li>
+			            		</ul>
+		            		</div>
+		            		
+		            	</div>
+	                    <!-- 商品排序 -->
+	                    <div class="paixu">
+	                    	<p>商品列表</p>                                               
+
+	                    </div>
+	            <!-- 商品列表 -->
+	                    <div class="goods_con">
+	            <!-- 商品盒子的模型 -->
+                         <div class="tishi">
+                         	请使用服务器打开网页，以方便我加载数据
+                         	<img src="../images/writing/smile.jpg">
+                         </div>
+	                   </div>
+	                   <div class="M-box">
+	                  <!-- 这里是分页列表 -->
+	                   </div>
+            
+                  
+	            </div>
+	        </div>	
+		</div>
+		<!-- 公共的底部 -->
+		<div class="footer_wrap">
+			
+		</div>
+
+		 <!-- 创建第一个模板 -->
+   <script id="goods_list" type="text/html">
+    {{each ids as v k}}
+            <li>
+   	    	  	 <a href="javascript:;">
+   	    	  	 	  <span class="ssbtn"> - </span>
+   	    	  	 	  <p>{{ids[k].type}}</p>
+   	    	  	 </a>
+       	    	  	
+       	    	  	 <ul class="zhankai">
+       	    	  	{{each v.list as l}}
+       	    	  	 	 <li><a href="javascript:;">{{l}}</a></li>
+       	    	  	  {{/each}}
+       	    	  	 </ul>
+   	      </li> 
+	{{/each}}
+</script>
+	 <!-- 创建第二个模板，商品盒子模型 -->
+   <script id="goods_box" type="text/html">
+
+  
+    {{each goods as v}}
+           <div class="goods_box">
+                    	   <a href="javascript:;" class="goods_pic">
+                    	      <img src="../{{v.src}}">
+                    	   </a>
+
+                    	   <a href="javascript:;" class="goods_meg">
+                    	   	  <p>{{v.name}}{{v.note}}</p>
+                    	   </a>
+                    	   <div class="danjia">
+	                    	   	  <p class="goods_danjia">￥{{v.price}}元</p>
+	                    	      <span><p>评论(</p><a href="javascript">{{v.num}}</a><p>)</p>
+	                    	   </span>
+                    	   </div>
+                    	   
+                    	   <div class="caozuo">
+	                    	   	<a href="javascript:;" class="ljgm">购买</a>
+	                    	   	<a href="javascript:;" class="shoucang">收藏</a>
+	                    	   	<a href="javascript:;" class="duibi">对比</a>
+                    	   </div>
+            </div>
+	{{/each}}
+</script>
+
+   <script src="../js/lib/jquery-1.11.3.js"></script>
+   <script src="../js/plug/template.js" ></script>
+   <script src="../js/jquery.pagination.js" ></script>
+     <script src="../js/public_html.js" ></script>
+   <script src="../js/js/goods_list.js" ></script>
+
+   
+    <script type="text/javascript">
+    $(function(){
+    	
+ 	     
+
+         $('.main_left').on("click",".zhankai",function(){
+         	console.log(0);
+             $(this).parent().find(".erjilist").slideToggle();
+             console.log($(this).parent());
+
+         });
+        	
+       
+// ---------------------------------------
+       $.getJSON('../json/list.json',function(data){
+        
+         var html=template('goods_list',data);
+       
+         $('.main_left_ul').html(html);
+         });
+
+      
+
+       
+    });
+   </script>
+	
+	</body>
+</html>

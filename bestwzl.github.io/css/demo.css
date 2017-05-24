@@ -1,0 +1,154 @@
+/*本样式表为demo.html提供样式支持，仅用于实验，不对用户可见*/
+   html,body,div,img{
+   	margin: 0;
+   	padding: 0;
+   }
+ .demo_con{
+  	     	position: relative;
+  	     	top: 100px;
+  	     	width: 100%;
+  	     	height: 500px;
+  	     }
+  	     .box_demo{
+  	     	position: absolute;
+  	     	width: 200px;
+  	     	height: 420px;
+  	     }
+  	     .box_demo .pic_item{
+  	     	position: relative;
+  	     	width: 200px;
+  	     	height: 100px;
+  	     	margin: 5px;
+  	     }
+  	     .big{
+  	     	position: absolute;
+  	     	width: 200px;
+  	     	height: 100px;
+  	     	top: 0;
+  	     	z-index: 1;
+  	     	background-color: #000;
+  	     	border:1px solid #fff;
+  	     	opacity: 0;
+  	     }
+  	      .box_demo .one{
+  	     	background-color: pink;
+  	     }
+  	      .box_demo .two{
+  	     	background-color: skyblue;
+  	     }
+  	      .box_demo .three{
+  	     	background-color: yellow;
+  	     }
+  	      .box_demo .four{
+  	     	background-color: green;
+  	     }
+
+
+		 .bbmg{
+		 	position: relative;
+		 	width: 100%;
+		 	height: 331px;
+		 }
+		 .swiper-container{
+		 	position: relative;
+		 	overflow: hidden;
+		 	width: 780px;
+		 	height: 331px;
+		 	margin: 50px auto;
+		 } 	
+		 .swiper-wrapper{
+		 	position: absolute;
+		 	width: 7180px;
+		 	height: 331px;
+		 	margin: 0 auto;
+		 } 
+		 .swiper-wrapper>div{
+		 	float: left;
+		 	
+		 }
+		 .swiper-pagination{
+		 	position: absolute;
+             background-color: rgba(0,0,0,0.3);
+		 	right: 270px;
+		 	bottom: -30px;
+		 	width: 263px;
+		 	height: 26px;
+		 	border-radius: 15px;
+		 	
+		 } 
+		 .swiper-pagination ul{
+		 	position: absolute;
+		 	left: 4px;
+		 	top: 2px;
+
+		 }
+		  .swiper-pagination li{
+		  	display: block;
+		  	margin: 0 5px;
+		  	list-style: none;
+		  	float: left;
+		  	width: 20px;
+		  	height: 20px;
+		  	border-radius: 50%;
+		  	cursor: pointer;
+		  	text-align: center;
+		  	line-height: 20px;
+		  	border: 1px solid deeppink;
+		  	box-shadow: 0 0 8px 0px deeppink inset;
+		  }
+		  .swiper-pagination li:hover,
+		  .swiper-pagination .this_active{
+		  	box-shadow: 0 0 10px 5px deeppink inset;
+		  }
+		 
+    .swiper-button-prev,
+    .swiper-button-next{
+    	
+    	text-decoration: none;
+    	position: absolute;
+    	top: 125px;
+    	width: 30px;
+    	height: 80px;
+    	background-color:rgba(0,0,0,0.3);
+    	text-align: center;
+        line-height: 80px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+       }
+     .swiper-button-prev{
+     	border-radius: 0 10px 10px 0; 
+     	left: 0px;
+     }
+      .swiper-button-next{
+        border-radius: 10px 0 0 10px;
+     	right: 0px;
+     }
+     .swiper-button-prev:hover,
+    .swiper-button-next:hover{
+    	background-color:rgba(0,0,0,0.7);
+    	color: red;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

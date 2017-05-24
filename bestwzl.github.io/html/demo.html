@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>用于测试各种功能的，不对用户可见</title>
+	 <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../css/fujian.css"> 
+	<link rel="stylesheet" type="text/css" href="../font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/demo.css">
+ 
+</head>
+<body>
+<div class="header_wrap"></div>
+
+
+
+
+         <div class="bbmg">
+			 	 	<div class="swiper-container">
+					    <div class="swiper-wrapper">
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/1.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/2.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/3.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/4.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/5.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/6.jpg">
+						        </div>
+
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/7.jpg">
+						        </div>
+						        <div class="swiper-slide">
+						        	<img src="../images/banner/8.jpg">
+						        </div>
+
+	                    </div>
+	                     <a class="swiper-button-prev" href="javascript:;"><</a>
+                         <a class="swiper-button-next" href="javascript:;">></a>
+	              </div>      
+				    <!-- 分页器 -->
+				       <div class="swiper-pagination">
+					       	  <ul class="li_wrap">
+					       	  	  <li class="this_active">1</li>
+					       	  	  <li>2</li>
+					       	  	  <li>3</li>
+					       	  	  <li>4</li>
+					       	  	  <li>5</li> 
+					       	  	  <li>6</li>
+					       	  	  <li>7</li>
+					       	  	  <li>8</li>
+							 </ul>
+				       </div>
+        </div>
+
+
+
+
+<div class="demo_con">
+   <div class="box_demo">
+   	   <div class="one pic_item">1
+   	   	   <div class="big">11</div>
+   	   </div>
+   	   <div class="two pic_item">2
+            <div class="big">22</div>
+   	   </div>
+   	   <div class="three pic_item">3
+             <div class="big">33</div>
+   	   </div>
+   	   <div class="four pic_item">4
+             <div class="big">44</div>
+   	   </div>
+   </div>
+
+</div>
+
+
+
+
+<div class="footer_wrap"></div>
+
+<script  src = "../js/lib/jquery-1.11.3.js"></script>
+<script  src = "../js/demo.js"></script>
+<script type="text/javascript">
+	$('.header_wrap').load('public.html .header_wrap');
+	$('.footer_wrap').load('public.html .footer_wrap');
+    
+
+    $('.box_demo').on('mouseenter','.pic_item',function(){
+    	$(this).find('.big').stop();
+        $(this).find('.big').animate({
+        	left:200,
+        	width:400,
+        	height:200,
+        	opacity:1
+        },'slow')
+    });
+     $('.box_demo').on('mouseleave','.pic_item',function(){
+    	$(this).find('.big').stop();
+       $(this).find('.big').animate({
+        	left:0,
+        	width:200,
+        	height:100,
+        	opacity:0
+        },'slow')
+    });
+
+
+
+</script>
+
+</body>
+</html>

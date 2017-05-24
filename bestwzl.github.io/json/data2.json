@@ -1,0 +1,39 @@
+{
+	"goods_id": 10001,
+	"goods_name": "尼康D7200,aps-c画幅旗舰机型，让拍照不再只是摄影师的游戏",
+	"goods_price": 6799.00,
+	"goods_pic_small": "images/goods/big1.jpg",
+	"goods_pic_large": "images/goods/big1.jpg",
+	"color": {
+		"1000101": {
+			"id": "1000101",
+			"type": "尼康D7200单机",
+			"sale_price": "6499",
+			"stock": 305
+		},
+		"1000102": {
+			"id": "1000102",
+			"type": "D7200/18-140套机",
+			"sale_price": "7699",
+			"stock": 189
+		},
+		"1000103": {
+			"id": "1000103",
+			"type": "D7200/18-200套机",
+			"sale_price": "8299",
+			"stock": 97
+		},
+		"1000104": {
+			"id": "1000104",
+			"type": "尼康D7200/50-1.8",
+			"sale_price": "7399",
+			"stock": 79
+		},
+		"1000105": {
+			"id": "1000105",
+			"type": "D7200/18-140/35-1.8双镜头",
+			"sale_price": "8499",
+			"stock": 139
+		}
+	}
+}
