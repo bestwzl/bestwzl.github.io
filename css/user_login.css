@@ -151,11 +151,12 @@ html body .ijzzh{
 }
 .mengban{
 	position: absolute;
-	display: none;
+	-display: none;
 	right: 20px;
 	top: 0px;;
-	width: 150px;
-	height: 35px;
+	width: 0px;
+	height: 0px;
+	transition: 0.5s;
 	border-radius: 5px;
 	cursor:not-allowed;
 	background-color: #000;

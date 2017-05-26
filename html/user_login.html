@@ -161,7 +161,7 @@
 				  	   	  <span>欢迎注册卓美账号</span>
 				  	   </div>
 				          <div class="user_con2">
-				          	   <div class="user_con_t">
+				          	   <form class="user_con_t">
 						          	   <!-- 用户名 -->
 						          	   	<div>
 						          	   		<span>同户名：</span>
@@ -238,7 +238,7 @@
 						          	   	  	  <div class="mengban"></div>
 						          	   	  </div>
 				          	   	       
-				          	   </div>
+				          	   </form>
 				          </div>
 				           <!---->
 				           <div class="qita_denglu">
@@ -255,6 +255,7 @@
 				  </div>
 
 			</div>
+
 			<div class="VIP_fuli">
 				<h3>注册成为卓美会员的好处</h3>
 				<ul>
@@ -267,6 +268,7 @@
 					<li>有很多风景可以看到</li>
 				</ul>
 			</div>
+
 		</div>
 <!--***********************footer*********************************-->
 
@@ -289,7 +291,20 @@
 		var lkzc= document.querySelector(".lkzc");
 		var camera= document.querySelector(".my_camera");
 		var mengban= document.querySelector(".mengban");
-		
+	
+
+	 ijzzh.onclick = function(){
+	 	 
+   		if(ijzzh.checked){
+   			mengban.style.width = 0 +"px";
+            mengban.style.height = 0 +"px";
+
+	   	}else{
+	   		mengban.style.width = 150 +"px";
+            mengban.style.height = 35 +"px";
+
+	   	}
+	   };	
 //$(function(){
 //	 // 邮箱验证
 //	$('.in_Email').blur(function(){
